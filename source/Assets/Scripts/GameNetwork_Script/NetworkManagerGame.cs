@@ -158,10 +158,12 @@ public class NetworkManagerGame : NetworkManager
     {
         StopClient();
         //GetComponent<NetworkDiscoveryHUD>().networkDiscovery.StopDiscovery();
+        GetComponent<NetworkDiscoveryHUD>().networkDiscovery.StopDiscovery();
 
         //m_mainMenu?.SetActive(true);
         //m_roundTimer?.gameObject.SetActive(false);
         //gameObject?.SetActive(false);
+        SceneManager.LoadScene("Scene_LevelSelect");
     }
 
     public void OnBackToMainMenuButtonPressedServer()
@@ -172,6 +174,7 @@ public class NetworkManagerGame : NetworkManager
 
         //instance.m_roundTimer?.gameObject.SetActive(false);
         gameObject?.SetActive(false);
+        SceneManager.LoadScene("Scene_LevelSelect");
     }
 
     public void ExitGame()
